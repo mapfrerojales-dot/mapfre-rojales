@@ -22,18 +22,18 @@
 </div>
 <div class="panel" id="panel-top"><div class="cards" id="tC"></div><div class="section"><h3>Categoría actual</h3><div class="top-path" id="tP"></div></div><div class="section"><h3>Estado por línea — objetivo semestral</h3><table id="tT"></table></div><div class="section"><h3>Ruta a TOP 1</h3><div id="rT"></div></div></div>
 </div>
-<div class="footer">MAPFRE Rojales · Sergio Vega · 02/06/2026</div>
+<div class="footer">MAPFRE Rojales · Sergio Vega · 08/06/2026</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const O={autos:1250,hogar:938,empresas:1562,vidaDecesos:1562,salud:938,total:6250};
 const PM={autos:420,hogar:300,empresas:900,vidaDecesos:200,salud:550};
 const ms=["Mar","Abr","May","Jun","Jul"];
-const au=[3705,3875,3973,0,0],ho=[516,636,754,851,137],em=[277,828,1127,0,0],vi=[0,696,402,384,0],sa=[0,684,998,0,0];
-const ts=[4497,6720,7255,1235,137],po=[13,17,14,4,2];
+const au=[3705,3875,3973,1705,0],ho=[516,636,754,836,137],em=[277,828,1127,0,0],vi=[0,696,402,351,0],sa=[0,684,998,0,0];
+const ts=[4498,6719,7254,2892,137],po=[13,18,15,7,0];
 const ls=[au,ho,em,vi,sa],ln=["Autos","Hogar","Empresas","Vida/Decesos","Salud"],lp=["20%","15%","25%","25%","15%"],lk=["autos","hogar","empresas","vidaDecesos","salud"];
 const fin={jubAhorro:{obj:5250,prod:[0,0,0,0,0]},fp:{obj:2625,prod:[0,0,0,0,0]},fi:{obj:875,prod:[0,0,0,0,0]},total:8750};
 const MA=3;
-const TOP={cs:[{n:"TOP 0",m:0},{n:"TOP 1",m:200},{n:"TOP 2",m:300},{n:"TOP 3",m:375},{n:"TOP 4",m:425},{n:"TOP 5",m:490}],ls:[{n:"Autos",o:29903,p:11553,t:70,pm:420},{n:"Hogar",o:5514,p:2549,t:60,pm:300},{n:"Multirriesgo",o:3500,p:0,t:70,pm:1500},{n:"Empresas",o:9982,p:2232,t:20,pm:900},{n:"Riesgo+Acc",o:4254,p:226,t:70,pm:300},{n:"Decesos",o:1408,p:1333,t:40,pm:330},{n:"Salud",o:3059,p:1682,t:40,pm:550},{n:"Ahorro PPP",o:4785,p:0,t:40,pm:2000},{n:"Ahorro PU",o:97148,p:0,t:30,pm:10000},{n:"F.Pensiones",o:20000,p:0,t:10,pm:5000},{n:"F.Inversión",o:20000,p:0,t:15,pm:5000}]};
+const TOP={cs:[{n:"TOP 0",m:0},{n:"TOP 1",m:200},{n:"TOP 2",m:300},{n:"TOP 3",m:375},{n:"TOP 4",m:425},{n:"TOP 5",m:490}],ls:[{n:"Autos",o:29903,p:13258,t:70,pm:420},{n:"Hogar",o:5514,p:2879,t:60,pm:300},{n:"Multirriesgo",o:3500,p:0,t:70,pm:1500},{n:"Empresas",o:9982,p:2232,t:20,pm:900},{n:"Riesgo+Acc",o:4254,p:226,t:70,pm:300},{n:"Decesos",o:1408,p:1333,t:40,pm:330},{n:"Salud",o:3059,p:1682,t:40,pm:550},{n:"Ahorro PPP",o:4785,p:0,t:40,pm:2000},{n:"Ahorro PU",o:97148,p:0,t:30,pm:10000},{n:"F.Pensiones",o:20000,p:0,t:10,pm:5000},{n:"F.Inversión",o:20000,p:0,t:15,pm:5000}]};
 function switchTab(t){document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.panel').forEach(e=>e.classList.remove('active'));document.querySelector(`.tab:nth-child(${t==='mix'?1:2})`).classList.add('active');document.getElementById('panel-'+t).classList.add('active')}
 function S(a){return a.reduce((x,y)=>x+y,0)}function F(n){return Math.round(n).toLocaleString('es-ES')}function P(n,d){return d?Math.round(n/d*100):0}
 function togAnt(){const e=document.getElementById('mA'),f=document.getElementById('fA');e.style.display=e.style.display==='none'?'block':'none';f.style.transform=e.style.display==='block'?'rotate(90deg)':'rotate(0deg)'}
